@@ -1,13 +1,10 @@
 <?php
 
-defined('LDAP_LOGIN_PATH') or die('Hacking attempt!');
-
 // Require the updated LDAP class
-require_once("adLDAP.php");
+include_once('include/adLDAP.php');
 
 // Define Global variable
 global $conf;
-
 
 
 /**
@@ -157,18 +154,6 @@ class Ldap extends adLDAP {
 		);
 		return $menu;
 	}
-
-
-
-    /**
-    * Check if successfully bound
-    * 
-    * @return bool
-    */
-    public function was_successful()
-    {
-          return $this -> _bind;
-    }
 
 
 
